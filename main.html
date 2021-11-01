@@ -1,6 +1,7 @@
 <html>  
     <head>
         <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <style>
 
@@ -17,7 +18,7 @@
         align-items: center;
         justify-content: center;
         font-family:"ui-sans-serif , system";
-        font-size: 60px;
+        font-size: 2em;
         font-weight: bold;
 
     }
@@ -29,7 +30,8 @@
         align-items: center;
         justify-content: center;
         flex-grow:1;
-        flex-direction: column;
+        flex-direction: row;
+        align-items: stretch;
     }
 
 
@@ -45,6 +47,8 @@
         height: 300px;
         overflow: auto;
         position: relative;
+        height:calc(100% - 115px);
+
 
     }
 
@@ -105,7 +109,7 @@
             <div id="flextitle">WASM Websocket tester</div>
               <div id="dialogws">
                   
-                  <div style="min-width: 600px;background-color: #39375c;padding: 10px;color:white;position: relative;"> 
+                  <div style="max-width: 600px;background-color: #39375c;padding: 10px;color:white;position: relative;flex-grow: 1;"> 
                       <a id="trashlog" title="clear logs" href="" ><img src="https://raw.githubusercontent.com/Templarian/MaterialDesign/5772b5e293352e7feed316c4ab6bde3ba572959e/svg/trash-can-outline.svg"></a>
 
                       <div style="text-align: center; position: relative;" >Enter your WS information here: 
