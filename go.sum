@@ -1,0 +1,13 @@
+github.com/gorilla/websocket v1.4.2/go.mod h1:YR8l580nyteQvAITg2hZ9XVh4b55+EU/adAjf1fMHhE=
+github.com/realPy/hogosuru v1.0.0-rc5.0.20211031081735-698889ff2203 h1:W4hmwDAuuqe+lIB0pxddOUK01M4cjIYcNHRzWYIEois=
+github.com/realPy/hogosuru v1.0.0-rc5.0.20211031081735-698889ff2203/go.mod h1:AfRJhftAAT8GMt/ryNNNdDOipJk8fA/Q2z+QCsl0yOc=
+github.com/realPy/hogosuru v1.0.0-rc5.0.20211031095752-97eda04b3e3b h1:bnfvlE+8eFJx2pH1dZJZupfuDNFYQjA0GLO+WWa3Y8I=
+github.com/realPy/hogosuru v1.0.0-rc5.0.20211031095752-97eda04b3e3b/go.mod h1:AfRJhftAAT8GMt/ryNNNdDOipJk8fA/Q2z+QCsl0yOc=
+github.com/realPy/hogosuru v1.0.0-rc6 h1:fNt3hprnPiq42b2ig3Lv/+RSVMq/jewop7d2xC8qGKk=
+github.com/realPy/hogosuru v1.0.0-rc6/go.mod h1:AfRJhftAAT8GMt/ryNNNdDOipJk8fA/Q2z+QCsl0yOc=
+github.com/realPy/hogosuru v1.0.0-rc6.0.20211029102759-e26ae5f6aac4 h1:6VewM9dzjbPw4Jfrg7yctPKIQooZf6vxQfB6Yaf84wQ=
+github.com/realPy/hogosuru v1.0.0-rc6.0.20211029102759-e26ae5f6aac4/go.mod h1:AfRJhftAAT8GMt/ryNNNdDOipJk8fA/Q2z+QCsl0yOc=
+github.com/realPy/hogosuru v1.0.0-rc6.0.20211029214923-2c80bd5f1b47 h1:rc0DmTkZ3DlRS0x0KeLGRKTh2eTKM3sHTNfgAwZrHWA=
+github.com/realPy/hogosuru v1.0.0-rc6.0.20211029214923-2c80bd5f1b47/go.mod h1:AfRJhftAAT8GMt/ryNNNdDOipJk8fA/Q2z+QCsl0yOc=
+github.com/realPy/hogosuru v1.0.0-rc6.0.20211030163945-1045e6c62e29 h1:ERzHppsec8RlfnhX5p6XQDFnRcRoUp4MlvoxAYhHcMk=
+github.com/realPy/hogosuru v1.0.0-rc6.0.20211030163945-1045e6c62e29/go.mod h1:AfRJhftAAT8GMt/ryNNNdDOipJk8fA/Q2z+QCsl0yOc=

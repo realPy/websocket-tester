@@ -1,0 +1,130 @@
+<html>  
+    <head>
+        <meta charset="utf-8"/>
+    </head>
+    <style>
+
+    #container {
+    min-height:100vh;
+	display:flex;
+	flex-direction:column; 
+    }
+
+    #flextitle {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        justify-content: center;
+        font-family:"ui-sans-serif , system";
+        font-size: 60px;
+        font-weight: bold;
+
+    }
+        
+    #dialogws {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        justify-content: center;
+        flex-grow:1;
+        flex-direction: column;
+    }
+
+
+    .baraction {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    }
+    
+    .logcontent {
+        background-color: white; 
+        height: 300px;
+        overflow: auto;
+        position: relative;
+
+    }
+
+    .logmessage {
+        padding: 4px;
+        color:black ;
+        font-size: small;
+        
+    }
+
+    .logmessagetime {
+        font-family: system-ui;
+        font-size: 10px;
+        display: inline;
+        padding-right: 4px;
+
+    }
+
+    .logmessagetimeerror {
+        color: red;
+    }
+
+    .logmessageerror {
+        color: red;
+    }
+    #trashlog {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1;
+    }
+
+    #icondisconnect {
+        position:absolute;
+        top: 0px;
+        right: 0px;
+    }
+
+
+     #iconconnect {
+        position:absolute;
+        top: 0px;
+        right: 0px;
+    }
+
+    .disconnecticon {
+        fill:red
+    }
+
+    .connecticon {
+        fill:white
+    }
+
+    </style>
+    <body style="margin:0; padding:0"> 
+        
+        <div id="container">
+            <div id="flextitle">Hogosuru ws tester</div>
+              <div id="dialogws">
+                  
+                  <div style="min-width: 600px;background-color: #39375c;padding: 10px;color:white;position: relative;"> 
+                      <a id="trashlog" title="clear logs" href="" ><img src="https://raw.githubusercontent.com/Templarian/MaterialDesign/5772b5e293352e7feed316c4ab6bde3ba572959e/svg/trash-can-outline.svg"></a>
+
+                      <div style="text-align: center; position: relative;" >Enter your WS information here: 
+                            <span id="iconconnect">
+                                <a id="ws-disconnect" title="Close connection" href="#"><svg class="connecticon" connecticonxmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-lan-connect" width="24" height="24" viewBox="0 0 24 24"><path d="M4,1C2.89,1 2,1.89 2,3V7C2,8.11 2.89,9 4,9H1V11H13V9H10C11.11,9 12,8.11 12,7V3C12,1.89 11.11,1 10,1H4M4,3H10V7H4V3M3,13V18L3,20H10V18H5V13H3M14,13C12.89,13 12,13.89 12,15V19C12,20.11 12.89,21 14,21H11V23H23V21H20C21.11,21 22,20.11 22,19V15C22,13.89 21.11,13 20,13H14M14,15H20V19H14V15Z" /></svg></a>
+                            </span>
+                            <span id="icondisconnect">
+                                <svg class="disconnecticon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-lan-disconnect" width="24" height="24" viewBox="0 0 24 24"><path d="M4,1C2.89,1 2,1.89 2,3V7C2,8.11 2.89,9 4,9H1V11H13V9H10C11.11,9 12,8.11 12,7V3C12,1.89 11.11,1 10,1H4M4,3H10V7H4V3M14,13C12.89,13 12,13.89 12,15V19C12,20.11 12.89,21 14,21H11V23H23V21H20C21.11,21 22,20.11 22,19V15C22,13.89 21.11,13 20,13H14M3.88,13.46L2.46,14.88L4.59,17L2.46,19.12L3.88,20.54L6,18.41L8.12,20.54L9.54,19.12L7.41,17L9.54,14.88L8.12,13.46L6,15.59L3.88,13.46M14,15H20V19H14V15Z" /></svg>
+                            </span>
+                           </div>
+                      <div id="connect" class="baraction"><input id="wsserver" type="text" style="flex-grow: 1;padding: 5px;" placeholder="wss://ws.ifelse.io"><button id="buttonconnect"  style="margin-left: 4px;min-width: 80px;">Connect</button></div>
+                      <div id="msg" class="baraction"><input id="msg2send" type="text" style="flex-grow: 1;padding: 5px;"><button id="sendmsg"  style="margin-left: 4px;min-width: 80px;">Send</button></div>
+                      <div id="logcontent" class="logcontent">
+                      </div>
+                      <template id="logmessagetemplate"><div id="logmessage" class="logmessage"><span id="logmessagetime" class="logmessagetime" ></span><span id="logmessagetxt"></span></div></template>
+                  </div>
+             </div>
+            <div></div>
+        </div>
+      
+    </body>
+   </html>
