@@ -35,6 +35,7 @@ type GlobalContainer struct {
 	connectButton  htmlbuttonelement.HtmlButtonElement
 	sendButton     htmlbuttonelement.HtmlButtonElement
 	logcontent     htmldivelement.HtmlDivElement
+	logs           htmldivelement.HtmlDivElement
 	ws             websocket.WebSocket
 	d              document.Document
 	connectedIcon  htmlspanelement.HtmlSpanElement
@@ -101,9 +102,9 @@ func (w *GlobalContainer) SetLog(typemsg string, msg string) {
 
 					}
 
-					w.logcontent.AppendChild(div.Node)
-					if scrollHeight, _ := w.logcontent.ScrollHeight(); hogosuru.AssertErr(err) {
-						w.logcontent.SetScrollTop(scrollHeight)
+					w.logs.AppendChild(div.Node)
+					if scrollHeight, _ := w.logs.ScrollHeight(); hogosuru.AssertErr(err) {
+						w.logs.SetScrollTop(scrollHeight)
 					}
 
 				}
@@ -308,6 +309,17 @@ func (w *GlobalContainer) OnLoad(d document.Document, n node.Node, route string)
 
 				}
 
+				if elemLogs, err := d.GetElementById("logs"); hogosuru.AssertErr(err) {
+
+					if elemLogsInstance, err := elemLogs.Discover(); hogosuru.AssertErr(err) {
+
+						if l, ok := elemLogsInstance.(htmldivelement.HtmlDivElement); ok {
+							w.logs = l
+						}
+					}
+
+				}
+
 				if elemConnect, err := d.GetElementById("connect"); hogosuru.AssertErr(err) {
 
 					if elemConnectInstance, err := elemConnect.Discover(); hogosuru.AssertErr(err) {
@@ -380,8 +392,8 @@ func (w *GlobalContainer) OnLoad(d document.Document, n node.Node, route string)
 						if e, ok := elemlinkInstance.(htmlanchorelement.HtmlAnchorElement); ok {
 
 							e.OnClick(func(e event.Event) {
-								for r, err := w.logcontent.FirstChild(); err == nil; r, err = w.logcontent.FirstChild() {
-									w.logcontent.RemoveChild(r)
+								for r, err := w.logs.FirstChild(); err == nil; r, err = w.logs.FirstChild() {
+									w.logs.RemoveChild(r)
 								}
 								e.PreventDefault()
 							})

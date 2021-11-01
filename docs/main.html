@@ -14,7 +14,7 @@
     #flextitle {
 
         display: flex;
-        justify-content: space-between;
+        /*justify-content: space-between;*/
         align-items: center;
         justify-content: center;
         font-family:"ui-sans-serif , system";
@@ -22,6 +22,14 @@
         font-weight: bold;
 
     }
+
+    #flexfooter {
+    display: flex;
+    font-size: smaller;
+    justify-content: center;
+    padding: 10px;
+    }
+
         
     #dialogws {
 
@@ -43,11 +51,16 @@
     }
     
     .logcontent {
-        background-color: white; 
-        height: 300px;
-        overflow: auto;
-        position: relative;
+    background-color: white;
+   /* height: 300px;*/
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    }   
 
+    #logs {
+        overflow: auto;
     }
 
     .logmessage {
@@ -74,7 +87,7 @@
     }
     #trashlog {
     position: absolute;
-    bottom: 10px;
+    top: 10px;
     right: 10px;
     z-index: 1;
     }
@@ -107,8 +120,8 @@
             <div id="flextitle">WASM Websocket tester</div>
               <div id="dialogws">
                   
-                  <div style="max-width: 600px;background-color: #39375c;padding: 10px;color:white;position: relative;flex-grow: 1;"> 
-                      <a id="trashlog" title="clear logs" href="" ><img src="https://raw.githubusercontent.com/Templarian/MaterialDesign/5772b5e293352e7feed316c4ab6bde3ba572959e/svg/trash-can-outline.svg"></a>
+                  <div style="max-width: 600px;background-color: #39375c;padding: 10px;color:white;position: relative;flex-grow: 1; display: flex;flex-direction: column;"> 
+                     
 
                       <div style="text-align: center; position: relative;" >Enter your WS information here: 
                             <span id="iconconnect">
@@ -121,11 +134,15 @@
                       <div id="connect" class="baraction"><input id="wsserver" type="text" style="flex-grow: 1;padding: 5px;" placeholder="wss://ws.ifelse.io"><button id="buttonconnect"  style="margin-left: 4px;min-width: 80px;">Connect</button></div>
                       <div id="msg" class="baraction"><input id="msg2send" type="text" style="flex-grow: 1;padding: 5px;"><button id="sendmsg"  style="margin-left: 4px;min-width: 80px;">Send</button></div>
                       <div id="logcontent" class="logcontent">
+                        <a id="trashlog" title="clear logs" href="" ><img src="https://raw.githubusercontent.com/Templarian/MaterialDesign/5772b5e293352e7feed316c4ab6bde3ba572959e/svg/trash-can-outline.svg"></a>
+                        <div id="logs">
+                            
+                        </div>
                       </div>
                       <template id="logmessagetemplate"><div id="logmessage" class="logmessage"><span id="logmessagetime" class="logmessagetime" ></span><span id="logmessagetxt"></span></div></template>
                   </div>
              </div>
-            <div></div>
+            <div id="flexfooter">Develop without JS with&nbsp;<del>love </del>&nbsp;hogosuru in GO by Manuel BARRAUD</div>
         </div>
       
     </body>
